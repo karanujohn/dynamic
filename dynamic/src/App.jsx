@@ -7,7 +7,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value);c
   };
 
   const handleAddItem = () => {
@@ -19,20 +19,20 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Dynamic List</h1>
+      <h1>Dynamic list manager</h1>
       <div className="input-container">
         <input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="Enter item"
+          placeholder="Enter an item"
           className="input-field"
         />
         <button onClick={handleAddItem} className="add-button">Add Item</button>
       </div>
       <div className="list-container">
         {items.length === 0 ? (
-          <p>No items in the list.</p>
+          <p></p>
         ) : (
           <ul>
           {items.map((item, index) => (
@@ -44,8 +44,4 @@ function App() {
   </div>
 );
 }
-
-
-
-
 export default App
